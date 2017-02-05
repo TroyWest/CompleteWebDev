@@ -29,10 +29,27 @@
             <li>MOSFET - Metal Oxide Semiconductor Field Effect Transistor</li>
         </ol>
 
-        <form action="">
-            <p>Username: <input type="text" placeholder="your Username"></p>
-            <p>Stay Logged In: <input type="checkbox" checked></p>
-            <p>Under 18:<input name="age" type="radio">Over 18: <input name="age" type="radio"></p>
+        <table style="border: solid 1px;">
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Junction forward voltage</th>
+                    </tr>
+
+                </thead>
+                <tbody style="border: solid 1px;">
+                    <tr>
+                        <td style="border: dotted 1px;">Germanium</td>
+                        <td style="border: dotted 1px;">0.27V</td>
+                    </tr>
+                    <tr>
+                        <td style="border: dotted 1px;">Silicon</td>
+                        <td style="border: dotted 1px;">0.71V</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        <form action="index.html">            
             <p>
                 Favourite Type of Transistor:
                 <select name="" id="">
@@ -42,9 +59,7 @@
                 </select>
             </p>
             <p><input type="submit"></p>
-            <table>
             
-            </table>
         </form>        
     </body>
 
