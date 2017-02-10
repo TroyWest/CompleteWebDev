@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <title>Complete Web Dev - Reaction Tester</title>
 
@@ -7,45 +8,45 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
-
+        
         #target {
-            position: absolute;
+            position: relative;
         }
-
-        .small{
+        
+        .small {
             width: 80px;
-            height: 80px;                  
+            height: 80px;
         }
-
-        .medium{
+        
+        .medium {
             width: 160px;
-            height: 160px;            
+            height: 160px;
         }
-
+        
         .large {
             width: 250px;
-            height: 250px;            
+            height: 250px;
         }
-
-        .circle{
+        
+        .circle {
             border-radius: 50%;
         }
-
+        
         .square {
             border-radius: 0;
         }
-
+        
         #canvas {
             width: 1000px;
-            height: 750px;
-            background-color: #AAAAAA;
+            height: 750px;            
         }
-
+        
         #time {
             font-weight: bold;
         }
     </style>
 </head>
+
 <body>
     <div id="instructions">
         <h1>Test Your Reactions!</h1>
@@ -54,20 +55,18 @@
     <div id="gameArea">
         <p id="time">Your time: <span id="timer"></span></p>
         <div id="canvas">
-            <div id="target"></div>             
+            <div id="target"></div>
         </div>
     </div>
 
     <script type="text/javascript">
-        var target = document.getElementById("target");
-
-        function setSize(){
+        function setSize() {
             var sizeNumber = Math.floor((3 * Math.random())) + 1;
-            if(sizeNumber == 1){
+            if (sizeNumber == 1) {
                 return " small ";
             }
 
-            if(sizeNumber == 2){
+            if (sizeNumber == 2) {
                 return " medium ";
             }
 
@@ -77,8 +76,8 @@
         function setShape() {
             var shapeNumber = Math.floor((2 * Math.random())) + 1;
 
-            if(shapeNumber == 1){
-                return " square ";                
+            if (shapeNumber == 1) {
+                return " square ";
             }
             return " circle ";
         }
@@ -88,7 +87,7 @@
             var blue = Math.floor((255 * Math.random())) + 1;
             var green = Math.floor((255 * Math.random())) + 1;
 
-            return "rgb(" + red +", "+ blue +", " + green + ")"
+            return "rgb(" + red + ", " + blue + ", " + green + ")"
         }
 
         function setPosition(targetDimension, canvasDimension) {
@@ -96,16 +95,28 @@
             return (Math.floor((max * Math.random()))) + "px";
         }
 
+        function clearTarget(target) {
+            target.className = "";
+        }
+
+        function showTarget(target) {
+            target.className += setSize();
+            target.className += setShape();
+            target.style.backgroundColor = setColor();
+            target.style.top = setPosition(target.clientHeight, canvas.clientHeight);
+            target.style.left = setPosition(target.clientWidth, canvas.clientWidth);
+        }
+
+        var target = document.getElementById("target");
         var canvas = document.getElementById("canvas");
 
-        target.style.position = "relative";
-        target.className += setSize();
-        target.className += setShape();
-        target.style.backgroundColor = setColor();
-        target.style.top = setPosition(target.clientHeight, canvas.clientHeight);
-        target.style.left = setPosition(target.clientWidth, canvas.clientWidth);
-        
+        showTarget(target);
 
+        target.onclick = function () {
+            clearTarget(target);
+            showTarget(target);
+        };
     </script>
 </body>
+
 </html>
