@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <title>Complete Web Dev - Reaction Tester</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #target {
+            position: absolute;
+        }
+
+        .small{
+            width: 80px;
+            height: 80px;                  
+        }
+
+        .medium{
+            width: 160px;
+            height: 160px;            
+        }
+
+        .large {
+            width: 250px;
+            height: 250px;            
+        }
+
+        .circle{
+            border-radius: 50%;
+        }
+
+        .square {
+            border-radius: 0;
+        }
+
+        #canvas {
+            width: 1000px;
+            height: 750px;
+            background-color: #AAAAAA;
+        }
+    </style>
+</head>
+<body>
+    <div id="instructions">
+        <h1>Test Your Reactions!</h1>
+        <p>Click on the boxes and circles as quickly as you can!</p>
+    </div>
+    <div id="gameArea">
+        <p id="time">Your time: <span id="timer"></span></p>
+        <div id="canvas">
+            <div id="target"></div>             
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var target = document.getElementById("target");
+
+        function setSize(){
+            var sizeNumber = Math.floor((3 * Math.random())) + 1;
+            if(sizeNumber == 1){
+                return " small ";
+            }
+
+            if(sizeNumber == 2){
+                return " medium ";
+            }
+
+            return " large "
+        }
+
+        function setShape() {
+            var shapeNumber = Math.floor((2 * Math.random())) + 1;
+
+            if(shapeNumber == 1){
+                return " square ";                
+            }
+            return " circle ";
+        }
+
+        function setColor() {
+            var red = Math.floor((255 * Math.random())) + 1;
+            var blue = Math.floor((255 * Math.random())) + 1;
+            var green = Math.floor((255 * Math.random())) + 1;
+
+            return "rgb(" + red +", "+ blue +", " + green + ")"
+        }
+
+        function setPosition(targetDimension, canvasDimension) {
+            var max = canvasDimension - targetDimension;
+            return (Math.floor((max * Math.random()))) + "px";
+        }
+
+        var canvas = document.getElementById("canvas");
+
+        target.style.position = "relative";
+        target.className += setSize();
+        target.className += setShape();
+        target.style.backgroundColor = setColor();
+        target.style.top = setPosition(target.clientHeight, canvas.clientHeight);
+        target.style.left = setPosition(target.clientWidth, canvas.clientWidth);
+        
+
+    </script>
+</body>
+</html>
