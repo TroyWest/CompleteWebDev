@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#target {
+    position: relative;
+}
+
+.small {
+    width: 80px;
+    height: 80px;
+}
+
+.medium {
+    width: 160px;
+    height: 160px;
+}
+
+.large {
+    width: 250px;
+    height: 250px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.square {
+    border-radius: 0;
+}
+
+#canvas {
+    width: 1000px;
+    height: 750px;
+}
+
+#time {
+    font-weight: bold;
+}
