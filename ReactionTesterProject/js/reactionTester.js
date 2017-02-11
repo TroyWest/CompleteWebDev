@@ -6,7 +6,7 @@ var startTime;
 var times = [];
 
 function setSize() {
-    var sizeNumber = Math.floor((3 * Math.random())) + 1;
+    var sizeNumber = Math.floor(3 * Math.random()) + 1;
     if (sizeNumber == 1) {
         return " small ";
     }
@@ -15,11 +15,11 @@ function setSize() {
         return " medium ";
     }
 
-    return " large "
+    return " large ";
 }
 
 function setShape() {
-    var shapeNumber = Math.floor((2 * Math.random())) + 1;
+    var shapeNumber = Math.floor(2 * Math.random()) + 1;
 
     if (shapeNumber == 1) {
         return " square ";
@@ -28,11 +28,11 @@ function setShape() {
 }
 
 function setColor() {
-    var red = Math.floor((255 * Math.random())) + 1;
-    var blue = Math.floor((255 * Math.random())) + 1;
-    var green = Math.floor((255 * Math.random())) + 1;
+    var red = Math.floor(255 * Math.random()) + 1;
+    var blue = Math.floor(255 * Math.random()) + 1;
+    var green = Math.floor(255 * Math.random()) + 1;
 
-    return "rgb(" + red + ", " + blue + ", " + green + ")"
+    return "rgb(" + red + ", " + blue + ", " + green + ")";
 }
 
 function setPosition(targetDimension, canvasDimension) {
@@ -68,8 +68,5 @@ target.onclick = function () {
     average.innerText = averageTime + "s";
 
     clearTarget();
-    setTimeout(function () {
-        showTarget();
-        
-    }, (Math.random() * 3000));
+    setTimeout(showTarget, (Math.random() * 3000));
 };
