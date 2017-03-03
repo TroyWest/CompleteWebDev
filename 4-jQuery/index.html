@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>jQuery</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>
+    <style>
+        #resizable {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+        }
+        
+        #small {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+        
+        #big {
+            width: 1500px;
+            height: 1500px;
+            background-color: rebeccapurple;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css" </head>
+
+    <body>
+        <ul id="sortable">
+            <li>List item one</li>
+            <li>List item two</li>
+            <li>List item three</li>
+        </ul>
+
+
+        <script type="text/javascript">
+            $(function () {
+                $("#sortable").sortable();
+
+            });
+        </script>
+    </body>
+
+</html>

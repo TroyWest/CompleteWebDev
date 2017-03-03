@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+textarea { 
+    resize: none;   
+    border-top: none;    
+}
+
+iframe {
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.panel {
+    float: left;
+    width: 50%;
+    border-left: none;
+}
+
+#control-bar {    
+    width: 100%;
+    background-color: #EEEEEE;
+    padding: 8px 0;
+    height: 30px;
+}
+
+#logo{
+    float: left;
+    font-size: 120%;
+    font-weight: bold;
+    padding: 3px 5px;
+}
+
+#controls {    
+    width: 233px;
+    margin: 0 auto;
+}
+
+.toggle-button {
+    float: left;
+    padding: 6px;
+    border: 1px solid gray;
+    border-right: none;
+    font-size: 90%;
+
+}
+
+.active {
+    background-color: #E8F2FF;
+}
+
+.highlighted-button {
+    background-color: gray;    
+}
+
+#css-toggle,#js-toggle,#output-toggle {
+    border-left: 1px solid #C4C4C4;
+}
+
+#work-area {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+#html {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#output {
+    border-right: 1px solid gray;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
