@@ -9,36 +9,54 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
       crossorigin="anonymous">
+    <style>
+      .scrollspy-example {
+        position: relative;
+        height: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+    </style>
   </head>
 
   <body>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-name="Troy" data-mail="troy.west@enlighten.co.nz">Email Troy</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-name="Adrienne">Email Adrienne</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-name="Poppy">Email Poppy</button>
-    <br/>
-    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"
-      data-placement="bottom">Click to toggle popover</button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-          </div>
-          <div class="modal-body">
-            <label for="To">To</label>
-            <input name="To" type="email">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
+    <div class="container">
+      <nav class="navbar navbar-light bg-faded">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" href="#pos1">Position 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pos2">Position 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pos3">Position 3</a>
+          </li>
+        </ul>
+      </nav>
+      <div data-spy="scroll" class="scrollspy-example" id="navbar-example2" data-offset="0">
+        <h4 id="pos1">Position 1</h4>
+        <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table
+          bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure.
+          Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust
+          fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco
+          consequat.
+        </p>
+        <h4 id="pos2">Position 2</h4>
+        <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table
+          bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure.
+          Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust
+          fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco
+          consequat.
+        </p>
+        <h4 id="pos3">Position 3</h4>
+        <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table
+          bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure.
+          Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust
+          fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco
+          consequat.
+        </p>
       </div>
     </div>
 
@@ -61,17 +79,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
       crossorigin="anonymous"></script>
     <script type="text/javascript">
-      $('#myModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget);
-        var recipient = button.data('name');
-        var address = button.data('mail');
-        var modal = $(this);
-        modal.find('.modal-title').text('New message to ' + recipient);
-        modal.find('.modal-body input').val(address);
-      });
-      $('#myModal').on('hidden.bs.modal', function (e) {
-        alert("Closed");
-      });
+      $('.bd-example').scrollspy({ target: '#navbar-example' })
     </script>
 
   </body>
