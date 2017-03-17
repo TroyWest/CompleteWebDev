@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+      body {
+        position: relative;
+      }
+      
+      .jumbotron {
+        text-align: center;
+        background-image: url('images/277H.jpg');
+        margin-top: 50px;
+      }
+      
+      #summary {
+        margin: 100px 40px 0;
+      }
+      
+      #download {
+        position: relative;
+        margin: 150px 0;
+        top: 150px;
+      }
+      
+      #navbar {
+        background-color: #AABBDD;
+      }
+      
+      #about {
+        padding-top: 60px;
+      }
+      
+      footer {
+        height: 500px;
+        background-color: #AABBDD;
+      }
+      
+      #login {
+        margin-left: 3px;
+      }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target="navbar" data-offset="100">
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-light bg-faded" id="navbar">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+      <a class="navbar-brand" href="#">Appify</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#jumbotron">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Downoad the App</a>
+          </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+          <div class="form-group row">
+            <input class="form-control" type="email" placeholder="Email" id="example-email-input">
+            <input class="form-control" type="password" placeholder="Password" id="example-password-input">
+            <button id="login" class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <div id="jumbotron" class="jumbotron">
+      <h1 class="display-3">Appify!</h1>
+      <p class="lead">Appify uses transproter technology from star trek to turn real life objects into apps you can take anywhere. Appify
+        your pets today!</p>
+      <hr class="my-4">
+      <p>Want to know more? Join our mailing list!</p>
+      <form class="form-inline my-2 mx-auto justify-content-md-center">
+        <div class="input-group">
+          <div class="input-group-addon" id="basic-addon1">@</div>
+          <input class="form-control mr-sm-2" type="email" placeholder="Email" aria-describedby="basic-addon1">
+        </div>
+        <button class="btn btn-primary my-2 my-sm-0" type="submit">Sign up</button>
+      </form>
+    </div>
+    <div class="container">
+      <div class="text-center" id="summary">
+        <h1>Take the things you love everywhere you go</h1>
+        <p class="lead">Download your friends so they can be with you instantly</p>
+      </div>
+    </div>
+    <div class="container">
+      <div id="about" class="row">
+        <div class="card-deck">
+          <div class="card">
+            <img class="card-img-top" src="images/106H.jpg" alt="Card image cap" style="width:100%">
+            <div class=" card-block ">
+
+              <h4 class="card-title "><i class="fa fa-bomb"></i> Card title</h4>
+              <p class="card-text ">This is a longer card with supporting text below as a natural lead-in to additional content. This content is
+                a little bit longer.
+              </p>
+            </div>
+          </div>
+          <div class="card ">
+            <img class="card-img-top" src="images/106H.jpg" alt="Card image cap" style="width:100%">
+            <div class="card-block ">
+              <h4 class="card-title "><i class="fa fa-bell-o"></i> Card title</h4>
+              <p class="card-text ">This card has supporting text below as a natural lead-in to additional content.
+              </p>
+            </div>
+          </div>
+          <div class="card ">
+            <img class="card-img-top" src="images/106H.jpg" alt="Card image cap" style="width:100%">
+            <div class="card-block ">
+              <h4 class="card-title"><i class="fa fa-download"></i> Card title</h4>
+              <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even
+                longer content than the first to show that equal height action.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <footer id="footer">
+      <div id="download" class="text-center">
+        <h3>Download the app!</h3>
+        <p class="lead">Do it now before the app downloads you!!!</p>
+        <a href="#"><img src="images/appstore-icon-mobile-retina.png" width="200px"></a>
+      </div>
+
+    </footer>
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js " integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n "
+      crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js " integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb "
+      crossorigin="anonymous "></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js " integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn "
+      crossorigin="anonymous "></script>
+    <script type="text/javascript ">
+      $('body').scrollspy({ target: '#navbar' })
+    </script>
+
+  </body>
+
+</html>
